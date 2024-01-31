@@ -8,7 +8,7 @@ contract DeployMordor is DeployUniversalRouter {
     function setUp() public override {
         params = RouterParameters({
             permit2: 0x000000000022D473030F116dDEE9F6B43aC78BA3,
-            weth9: UNSUPPORTED_PROTOCOL,
+            weth9: 0x1953cab0E5bFa6D4a9BaD6E05fD46C1CC6527a5a,
             seaportV1_5: UNSUPPORTED_PROTOCOL,
             seaportV1_4: UNSUPPORTED_PROTOCOL,
             openseaConduit: UNSUPPORTED_PROTOCOL,
