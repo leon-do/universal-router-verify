@@ -1,6 +1,7 @@
 import 'hardhat-typechain'
 import '@nomiclabs/hardhat-ethers'
-import '@nomicfoundation/hardhat-chai-matchers'
+// import '@nomicfoundation/hardhat-chai-matchers'
+import '@nomiclabs/hardhat-etherscan'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -68,9 +69,48 @@ export default {
     baseGoerli: {
       url: `https://goerli.base.org`,
     },
+    mordor: {
+      url: "https://geth-mordor.etc-network.info",
+    },
+    classic: {
+      url: "https://etc.rivet.link",
+    }
   },
   namedAccounts: {
     deployer: 0,
+  },
+  etherscan: {
+    apiKey: {
+      classic: "b6390974-9880-4130-9a3b-fd4a7b80fc39",
+      mordor: "57246839-f3fb-4d62-ae57-4214b12a697e",
+      goerli: "24674a64-9981-4694-83fa-4b4b746f49a4"
+    },
+    customChains: [
+      {
+        network: "classic",
+        chainId: 61,
+        urls: {
+          apiURL: "https://etc.blockscout.com/api",
+          browserURL: "https://etc.blockscout.com/",
+        },
+      },
+      {
+        network: "mordor",
+        chainId: 63,
+        urls: {
+          apiURL: "https://etc-mordor.blockscout.com/api",
+          browserURL: "https://etc-mordor.blockscout.com/",
+        },
+      },
+      {
+        network: "goerli",
+        chainId: 5,
+        urls: {
+          apiURL: "https://eth-goerli.blockscout.com/api",
+          browserURL: "https://eth-goerli.blockscout.com/",
+        },
+      }
+    ],
   },
   solidity: {
     compilers: [DEFAULT_COMPILER_SETTINGS],

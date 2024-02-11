@@ -7,7 +7,6 @@ out/
 /broadcast/*
 /broadcast/*/31337/
 
-node_modules
 .env
 coverage
 coverage.json

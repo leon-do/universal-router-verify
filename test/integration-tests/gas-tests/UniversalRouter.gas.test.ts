@@ -11,7 +11,7 @@ import {
 } from '../shared/constants'
 import { abi as TOKEN_ABI } from '../../../artifacts/solmate/src/tokens/ERC20.sol/ERC20.json'
 import { abi as WETH_ABI } from '../../../artifacts/contracts/interfaces/external/IWETH9.sol/IWETH9.json'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
 import { resetFork, WETH, DAI } from '../shared/mainnetForkHelpers'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import hre from 'hardhat'

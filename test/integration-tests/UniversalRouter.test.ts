@@ -8,7 +8,7 @@ import {
   ERC1155,
 } from '../../typechain'
 import { BigNumber, BigNumberish } from 'ethers'
-import { Pair } from '@uniswap/v2-sdk'
+import { Pair } from '@etcswap/v2-sdk'
 import { expect } from './shared/expect'
 import { abi as ROUTER_ABI } from '../../artifacts/contracts/UniversalRouter.sol/UniversalRouter.json'
 import { abi as TOKEN_ABI } from '../../artifacts/solmate/src/tokens/ERC20.sol/ERC20.json'

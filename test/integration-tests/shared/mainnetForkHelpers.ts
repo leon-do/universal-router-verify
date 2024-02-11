@@ -14,14 +14,14 @@ import {
   TOWNSTAR_ADDRESS,
   MILADY_ADDRESS,
 } from './constants'
-import { abi as V2_PAIR_ABI } from '../../../artifacts/@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol/IUniswapV2Pair.json'
-import { Currency, Token, WETH9 } from '@uniswap/sdk-core'
+import { abi as V2_PAIR_ABI } from '../../../artifacts/@etcswap/v2-core/contracts/interfaces/IETCswapV2Pair.sol/IETCswapV2Pair.json'
+import { Currency, Token, WETH9 } from '@etcswap/sdk-core'
 import { TransactionResponse } from '@ethersproject/abstract-provider'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import { BigNumber, constants } from 'ethers'
 import hre from 'hardhat'
-import { MethodParameters } from '@uniswap/v3-sdk'
-import { Pair } from '@uniswap/v2-sdk'
+import { MethodParameters } from '@etcswap/v3-sdk'
+import { Pair } from '@etcswap/v2-sdk'
 const { ethers } = hre
 
 export const WETH = WETH9[1]

@@ -1,5 +1,5 @@
 import { CommandType, RoutePlanner } from '../shared/planner'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
 import { UniversalRouter, Permit2 } from '../../../typechain'
 import { resetFork } from '../shared/mainnetForkHelpers'
 import { ALICE_ADDRESS, DEADLINE } from '../shared/constants'

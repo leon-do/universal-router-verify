@@ -1,6 +1,6 @@
 import { CommandType, RoutePlanner } from './../shared/planner'
 import { UniversalRouter, Permit2 } from '../../../typechain'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
 import NFTX_ZAP_ABI from './../shared/abis/NFTXZap.json'
 import { resetFork } from './../shared/mainnetForkHelpers'
 import { ALICE_ADDRESS, DEADLINE, NFTX_MILADY_VAULT_ID } from './../shared/constants'

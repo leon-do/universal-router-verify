@@ -4,7 +4,7 @@ import { abi as ERC20_ABI } from '../../../artifacts/solmate/src/tokens/ERC20.so
 import { UniversalRouter, Permit2, ERC20 } from '../../../typechain'
 import { resetFork } from '../shared/mainnetForkHelpers'
 import { DEADLINE } from '../shared/constants'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import hre from 'hardhat'
 import { BigNumber } from 'ethers'

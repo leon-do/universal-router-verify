@@ -1,9 +1,9 @@
-import { encodeSqrtRatioX96, FeeAmount, Pool, TickMath } from '@uniswap/v3-sdk'
-import { Pair, Route as V2RouteSDK } from '@uniswap/v2-sdk'
-import { Route as V3RouteSDK } from '@uniswap/v3-sdk'
+import { encodeSqrtRatioX96, FeeAmount, Pool, TickMath } from '@etcswap/v3-sdk'
+import { Pair, Route as V2RouteSDK } from '@etcswap/v2-sdk'
+import { Route as V3RouteSDK } from '@etcswap/v3-sdk'
 import { encodePath, expandTo18Decimals } from '../shared/swapRouter02Helpers'
 import { BigNumber } from 'ethers'
-import { SwapRouter } from '@uniswap/router-sdk'
+import { SwapRouter } from '@etcswap/router-sdk'
 import {
   executeSwapRouter02Swap,
   resetFork,
@@ -21,9 +21,9 @@ import { RoutePlanner, CommandType } from '../shared/planner'
 import hre from 'hardhat'
 import { UniversalRouter, Permit2, ERC20__factory, ERC20 } from '../../../typechain'
 import { getPermitSignature, PermitSingle } from '../shared/protocolHelpers/permit2'
-import { CurrencyAmount, Percent, Token, TradeType } from '@uniswap/sdk-core'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
-import { IRoute, Trade } from '@uniswap/router-sdk'
+import { CurrencyAmount, Percent, Token, TradeType } from '@etcswap/sdk-core'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
+import { IRoute, Trade } from '@etcswap/router-sdk'
 const { ethers } = hre
 
 describe('Uniswap UX Tests gas:', () => {

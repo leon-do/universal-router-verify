@@ -4,8 +4,8 @@ pragma solidity ^0.8.15;
 import 'forge-std/Test.sol';
 import {Permit2} from 'permit2/src/Permit2.sol';
 import {ERC20} from 'solmate/src/tokens/ERC20.sol';
-import {IUniswapV2Factory} from '@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol';
-import {IUniswapV2Pair} from '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+import {IETCswapV2Factory} from '@etcswap/v2-core/contracts/interfaces/IETCswapV2Factory.sol';
+import {IETCswapV2Pair} from '@etcswap/v2-core/contracts/interfaces/IETCswapV2Pair.sol';
 import {UniversalRouter} from '../../contracts/UniversalRouter.sol';
 import {Payments} from '../../contracts/modules/Payments.sol';
 import {Constants} from '../../contracts/libraries/Constants.sol';
@@ -19,7 +19,7 @@ abstract contract UniswapV2Test is Test {
     address constant RECIPIENT = address(10);
     uint256 constant AMOUNT = 1 ether;
     uint256 constant BALANCE = 100000 ether;
-    IUniswapV2Factory constant FACTORY = IUniswapV2Factory(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f);
+    IETCswapV2Factory constant FACTORY = IETCswapV2Factory(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f);
     ERC20 constant WETH9 = ERC20(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2);
     Permit2 constant PERMIT2 = Permit2(0x000000000022D473030F116dDEE9F6B43aC78BA3);
     address constant FROM = address(1234);
@@ -59,7 +59,7 @@ abstract contract UniswapV2Test is Test {
             address pair = FACTORY.createPair(token0(), token1());
             deal(token0(), pair, 100 ether);
             deal(token1(), pair, 100 ether);
-            IUniswapV2Pair(pair).sync();
+            IETCswapV2Pair(pair).sync();
         }
 
         vm.startPrank(FROM);

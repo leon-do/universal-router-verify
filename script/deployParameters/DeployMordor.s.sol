@@ -29,6 +29,6 @@ contract DeployMordor is DeployUniversalRouter {
             poolInitCodeHash: 0x7ea2da342810af3c5a9b47258f990aaac829fe1385a1398feb77d0126a85dbef
         });
 
-        unsupported = 0x5302086A3a25d473aAbBd0356eFf8Dd811a4d89B;
+        unsupported = 0xA88cD383962992b616D3F9672d0A13f909Eaf30d;
     }
 }

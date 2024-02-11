@@ -2,7 +2,7 @@ import { CommandType, RoutePlanner } from './../shared/planner'
 import { UniversalRouter, Permit2 } from '../../../typechain'
 import { resetFork } from './../shared/mainnetForkHelpers'
 import { ALICE_ADDRESS, DEADLINE, ZERO_ADDRESS } from './../shared/constants'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import hre from 'hardhat'
 const { ethers } = hre

@@ -8,11 +8,11 @@ import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import hre from 'hardhat'
 import deployUniversalRouter, { deployPermit2 } from '../shared/deployUniversalRouter'
 import { RoutePlanner, CommandType } from '../shared/planner'
-import snapshotGasCost from '@uniswap/snapshot-gas-cost'
+import snapshotGasCost from '@etcswap/snapshot-gas-cost'
 const { ethers } = hre
 import WETH_ABI from '../../../artifacts/contracts/interfaces/external/IWETH9.sol/IWETH9.json'
 import { BigNumber } from 'ethers'
-import { ADDRESS_THIS } from '@uniswap/router-sdk'
+import { ADDRESS_THIS } from '@etcswap/router-sdk'
 
 describe('Payments Gas Tests', () => {
   let alice: SignerWithAddress
